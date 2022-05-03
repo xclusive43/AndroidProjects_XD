@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginTop="60dp"
+    android:layout_height="match_parent"
+    tools:context=".Dashboard1_fragment">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:id="@+id/controlLineRts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="48sp"
+            android:textOff="RTS"
+
+            android:backgroundTint="@color/colorSendText"
+            android:textOn="RTS" />
+
+        <ToggleButton
+            android:id="@+id/controlLineCts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="48sp"
+            android:backgroundTint="@color/colorSendText"
+            android:clickable="false"
+            android:textColor="@android:color/primary_text_light_nodisable"
+            android:textOff="CTS"
+            android:visibility="gone"
+            android:textOn="CTS" />
+
+        <View
+            android:layout_height="match_parent"
+            android:layout_width="6dp" />
+
+        <ToggleButton
+            android:id="@+id/controlLineDtr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="48sp"
+            android:backgroundTint="@color/colorSendText"
+            android:textOff="DTR"
+            android:visibility="gone"
+            android:textOn="DTR" />
+
+        <ToggleButton
+            android:id="@+id/controlLineDsr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:minWidth="48sp"
+            android:backgroundTint="@color/colorSendText"
+            android:textColor="@android:color/primary_text_light_nodisable"
+            android:textOff="DSR"
+            android:visibility="gone"
+            android:textOn="DSR" />
+
+        <View
+            android:layout_height="match_parent"
+            android:layout_width="6dp" />
+
+        <ToggleButton
+            android:id="@+id/controlLineCd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:minWidth="48sp"
+            android:visibility="gone"
+            android:backgroundTint="@color/colorSendText"
+            android:textColor="@android:color/primary_text_light_nodisable"
+            android:textOff="CD"
+            android:textOn="CD" />
+
+        <ToggleButton
+            android:id="@+id/controlLineRi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="48sp"
+            android:clickable="false"
+            android:visibility="gone"
+            android:backgroundTint="@color/colorSendText"
+            android:textColor="@android:color/primary_text_light_nodisable"
+            android:textOff="RI"
+            android:textOn="RI" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:background="@color/colorPrimaryDark"
+        android:padding="6dp">
+
+        <TextView
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto_condensed_bold"
+            android:gravity="center"
+            android:text="Readings"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="380dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/receive_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:freezesText="true"
+                android:paddingLeft="20dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto"
+                android:gravity="start"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:scrollbars="vertical"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        </LinearLayout>
+    </ScrollView>
+
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:background="?android:attr/listDivider"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_marginBottom="5dp"-->
+<!--        android:layout_height="2dp" />-->
+
+    <LinearLayout
+        android:id="@+id/donelinearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+          android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/done_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/roboto"
+            android:text="Done"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:rippleColor="@color/orange" />
+        <EditText
+            android:id="@+id/send_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto"
+            android:background="@drawable/border_blue"
+            android:textColor="@color/black"
+            android:paddingLeft="10dp"
+            android:hint="Actual"
+            android:visibility="gone"
+            android:inputType="numberDecimal"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/savebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/white"
+            android:elevation="16dp"
+            android:text="Save"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:rippleColor="@color/orange"
+
+            />
+
+        <Button
+            android:id="@+id/clearbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/roboto"
+            android:text="Clear"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:rippleColor="@color/orange"
+
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:gravity="start">
+
+
+
+
+<!--        <Button-->
+<!--            android:id="@+id/retestbtn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:backgroundTint="@color/white"-->
+<!--            android:fontFamily="@font/roboto"-->
+<!--            android:text="Re-test"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="12sp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:rippleColor="@color/orange"-->
+
+            />
+    </LinearLayout>
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:background="?android:attr/listDivider"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_height="2dp" />-->
+</LinearLayout>
+
+
+</ScrollView>

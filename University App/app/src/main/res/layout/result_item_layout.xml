@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card1"
+    android:layout_width="match_parent"
+    android:background="#00FFFFFF"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/mirror"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#004C4949">
+
+
+            <TextView
+                android:id="@+id/examhead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#40C4FF"
+                android:gravity="start"
+                android:padding="5dp"
+                android:text="Term: 1"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/exammode"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/announcement_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="start"
+                android:text="Course"
+                android:paddingStart="15dp"
+                android:textAllCaps="true"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/examhead" />
+
+            <TextView
+                android:id="@+id/exammode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#40C4FF"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Total CGPA: 8.85"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/examhead"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="start"
+                android:paddingEnd="5dp"
+                android:textColor="@color/white"
+                android:text="Grade"
+                android:textAllCaps="true"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/exammode" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/mirror"
+                app:layout_constraintTop_toBottomOf="@+id/announcement_body" />
+
+            <TextView
+                android:id="@+id/papername1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="papercode+name"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:paddingStart="15dp"
+                app:layout_constraintEnd_toStartOf="@+id/papergrade1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+            <TextView
+                android:id="@+id/papergrade1"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circleborder"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="A"
+                android:textColor="@color/white"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/papername1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/papername1" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/mirror"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/papername1" />
+
+            <TextView
+                android:id="@+id/papername2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="papercode+name"
+                android:paddingStart="15dp"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/papergrade2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+            <TextView
+
+                android:id="@+id/papergrade2"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circleborder"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="A"
+                android:textAllCaps="true"
+
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/mirror"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/papername2" />
+
+            <TextView
+
+                android:id="@+id/papername3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="papercode+name"
+                android:paddingStart="15dp"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/papergrade3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider4" />
+
+            <TextView
+                android:id="@+id/papergrade3"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circleborder"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="B+"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider4" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/mirror"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/papername3" />
+
+            <TextView
+                android:id="@+id/papername4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="papercode+name"
+                android:textAllCaps="true"
+                android:paddingStart="15dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/papergrade4"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <TextView
+
+                android:id="@+id/papergrade4"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circleborder"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="C+"
+                android:textColor="@color/white"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/mirror"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/papername4" />
+
+            <TextView
+
+                android:id="@+id/papername5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="papercode+name"
+                android:textAllCaps="true"
+
+                android:paddingStart="15dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/papergrade5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+            <TextView
+
+
+                android:id="@+id/papergrade5"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circleborder"
+                android:gravity="center"
+                android:padding="15dp"
+                android:textColor="@color/white"
+                android:text="A+"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+            <View
+
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/mirror"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/papername5" />
+
+            <TextView
+                android:id="@+id/papername6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="papercode+name"
+                android:textAllCaps="true"
+                android:paddingStart="15dp"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/papergrade6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+            <TextView
+
+                android:id="@+id/papergrade6"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circleborder"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:padding="15dp"
+                android:text="A+"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+            <View
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/mirror"
+                app:layout_constraintEnd_toEndOf="@+id/papergrade6"
+                app:layout_constraintTop_toBottomOf="@+id/papername6" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

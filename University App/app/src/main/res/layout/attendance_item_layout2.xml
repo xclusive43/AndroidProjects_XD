@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="#004C4949"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/mirror"
+        android:elevation="10dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:paddingRight="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/assignmentpapernamecode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#4AC516"
+                android:gravity="start"
+                android:maxLines="1"
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp"
+                android:text="monday,10 Aug 2020"
+                android:textAllCaps="true"
+                android:textColor="#404040"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/assignmentmarks"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/assignmenttype"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="start"
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp"
+                android:text="10:00-11:00 Am"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/assignmentpapernamecode"
+                app:layout_constraintStart_toEndOf="@+id/assignmentpercentage"
+                app:layout_constraintTop_toBottomOf="@+id/assignmentmarks" />
+
+            <TextView
+                android:id="@+id/assignmentmarks"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="8dp"
+                android:gravity="start"
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp"
+                android:text="factly name"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/assignmentpercentage"
+                app:layout_constraintTop_toBottomOf="@+id/assignmentpapernamecode" />
+
+            <TextView
+                android:id="@+id/assignmentpercentage"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:background="#81FFFFFF"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="P"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

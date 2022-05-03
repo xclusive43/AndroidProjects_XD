@@ -1,0 +1,221 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <!-- Uncompressed jQuery -->
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Font Awesome -->
+    <script
+            src="https://kit.fontawesome.com/996973c893.js"
+            crossorigin="anonymous"
+    ></script>
+
+    <!-- Google Fonts -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <!-- My Stylesheet -->
+
+
+    <!-- My jQuery <script src="main.js"></script>-->
+
+
+    <!-- Chart.js (Working CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+    <title>state</title>
+    <style type="text/css">
+
+    	/* Changing the font-family of all the elements in the project */
+        *{
+            margin: 0 auto;
+        }
+body { background: #3c3737;
+      font-family: 'Righteous', cursive;
+     }
+
+         #h
+        {
+           
+             
+            width: 95%;
+            background: #3c3737;
+            padding: 10px;
+            color: #e8e8e8;
+            top: 15px;
+            bottom: 100px;
+            border: 0px solid  #9aa3ac;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+           
+            
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+           
+
+
+        }
+        .body1{
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.1);
+            width: 95%;
+        }
+
+
+
+        h5
+        {
+
+            color: #1d1b1b;
+            font-size: 10px;
+            margin-right: 20px;
+            margin-top: 10px;
+
+        }
+        p
+        {   text-align: center;
+             color: white;
+            letter-spacing: 1px;
+            font-size: 10px;
+
+        }
+        .table-responsive
+        {
+            
+            padding: 0;
+            margin: 0;
+        }
+        th
+        {
+            background-color: #3c3737;
+            color: #efefef;
+            letter-spacing: 1px;
+              text-align:left;
+            font-size: 12px;
+        }
+        table tr:nth-child(odd) {
+    background-color:rgba(60, 55, 55, 0);
+    color: #eaeaea;
+    text-align:left;
+    font-size: 10px;
+
+
+}
+    table tr:nth-child(even) {
+    background-color:rgba(234, 234, 234, 0);
+    color: #eaeaea;
+    text-align: left;
+    font-size: 10px;
+}
+    </style>
+</head>
+<body>
+ <div class="card" id="h">
+    COVID19 LIVE STATUS<br>
+    <h6 class="card-letter" style="font-size: 11px; color: #00bbff">Created by Xclusive @jayee </h6>
+
+</div>
+ <div class="body1">
+     <div class="card" style="text-align: center; padding: 5px; color: #00bbff;background-color: #3c3737;       margin-top: 35px;">  State Wise
+
+</div>
+
+<div class="table-responsive" >
+    <table class="table" id="countries_stat">
+        <tr>
+            <th class="text-capitalize;">State</th>
+            <th class="text-capitalize;">Confirmed</th>
+            <th class="text-capitalize;">Active</th>
+            <th class="text-capitalize;">Recovered</th>
+            <th class="text-capitalize;">Deaths</th>
+        </tr>
+        <tr><td  id="tstates"></td>
+            <td  id="tconfirmed"></td>
+            <td  id="tactive"></td>
+            <td  id="tdeaths"></td>
+            <td  id="trecovered"></td>
+        </tr>
+    </table>
+</div>
+
+    </div>
+    
+
+
+
+
+ <!-- Footer -->
+<!-- Footer -->
+<footer class="footer mt-5 py-2" style="margin-top:0px; background: rgba(0, 0, 0, 0)">
+    <div class="container text-center">
+        <span class="text-muted" style="font-size: 12px;"
+        >Copyright &copy;2020
+          <a href="#" target="_blank" style="font-size: 12px;"><br>Xclusive-@jayee | Informed by Covid19india.org</a></span>
+    </div>
+</footer>
+<!--///////////////-->
+</body>
+</html>
+<script type="text/javascript">
+    
+$(document).ready(function()
+{
+  $.getJSON("https://api.covid19india.org/data.json",function(data){
+      var state=[];
+      var confirmed= [];
+      var recovered =[];
+      var deaths=[];
+      var active=[];
+            
+     console.log(data.statewise);
+      var countries = data.statewise;
+      //console.log(countries.length);
+    let table = document.getElementById('countries_stat');
+      
+      for(let i=0; i<countries.length;i++){
+          let row = table.insertRow(i+1);
+           
+          let statename =row.insertCell(0);
+          let confirmed =row.insertCell(1);
+          
+          let active =row.insertCell(2);
+          let recovered =row.insertCell(3);
+          let deaths =row.insertCell(4);
+          
+       statename.innerHTML = data.statewise[i+1].state;
+       confirmed.innerHTML = data.statewise[i+1].confirmed;
+       active.innerHTML = data.statewise[i+1].active;
+       recovered.innerHTML = data.statewise[i+1].recovered;
+       deaths.innerHTML = data.statewise[i+1].deaths;
+          }
+  
+   
+       
+      $.each(data.statewise,function(id,obj){
+          state.push(obj.state);
+          confirmed.push(obj.confirmed);
+          recovered.push(obj.recovered);
+          deaths.push(obj.deaths);
+          
+      });
+  
+  });
+});
+    
+    
+</script>

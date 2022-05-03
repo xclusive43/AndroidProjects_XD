@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+<head><title>COVID19-LIVE</title>
+<link rel="shortcut icon" href="../resources/corona-virus.png">
+ 
+<meta charset="utf-8">
+    
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="author" content="AJAY PRAJAPATI">
+<meta name="description" content="This blog is all about the live covid19 status of a particular country by showing varius details like total popolation,total confirmed case, total active case, total death etc.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+<style type="text/css">
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   
+ }
+    
+       body
+       {
+            
+       }
+       
+   	.head1{
+    background: #4e4646;
+    color:#ffffff;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    width: 70%;
+     
+    margin:0px 0px 0px 62px;
+    font-size: 10px;
+     padding: 10px;
+    text-align: center;
+     font-family: 'Poppins', sans-serif;
+    box-shadow: 0 14px 28px rgba(74, 67, 67, 0.5), 0 10px 10px rgba(172, 63, 63, 0.1);       
+    
+     
+}
+span
+{
+    font-size: 6px;
+    margin-left: 35%;
+
+} 
+       table
+       {
+           width: 100%;
+            
+       }
+       table tr td{
+           font-size: 7px;
+           padding: 2px;
+       }
+       table tr th{
+           font-size: 7px;
+           padding: 2px;
+       }
+       .tab1
+       {
+           width: 50%;
+           margin-left:  100px;
+           
+       }
+.tab1 tr td
+       {
+           padding: 5px;
+           text-align: center;
+           
+           
+           border-bottom-left-radius: 20px;
+           border-bottom-right-radius: 10px;
+           border-top-right-radius: 20px;
+       }
+ .tab1 tr td h2
+       {   padding: 4px;
+           font-size: 7px;
+       }
+
+ 
+   
+ h1
+{
+    font-size:6px;
+}
+ h2
+       {
+           
+       }
+ 
+th {
+     padding: 1px;
+    border: none;
+    border-spacing: 0;
+    font-family: 'Poppins', sans-serif;  
+    background: #55dfe5;
+    border-radius: 5px 5px 0px 0px;
+    position:relative;
+    position: -webkit-sticky;
+    letter-spacing: 1px;
+     
+    top: 0px;
+}
+
+tr:nth-child(even) {
+     
+    text-align: center;
+    letter-spacing: 1;
+
+
+}
+
+.tab2 tr:nth-child(odd) {
+    background-color:lightgreen;
+    color: black;
+    text-align: center;
+}
+
+tr td {
+    padding: 1px 0;
+     
+
+
+}
+    
+
+ 
+</style> 
+</head>
+
+<body> <div class="head1"> CORONA LIVE STATUS
+             <div><h1>Created by Xclusive @jayee | Informed by rapidapi.com</h1></div>
+        </div>
+     <span id="today" ></span>
+       
+         <table class="tab1">
+            
+           <tr><td style="background: #e6e653;"><h2>Total Cases</h2></td>
+               <td style="background: #e6e653;"><h2 id="total_cases" ></h2></td>
+               <td style="background: #ff3352;"><h2>Total Deaths</h2></td>
+               <td style="background: #ff3352;"><h2 id="total_death"></h2></td>
+               <td style="background: #53e664;"><h2>Total Recovery</h2></td>
+               <td style="background: #53e664;"><h2 id="total_recovered"></h2></td>
+               <td style="background: #53d5e6;"><h2>New case</h2></td>
+               <td style="background: #53d5e6;"><h2 id="new_case"></h2></td>
+               <td style="background: #be53e6;"><h2>New Death</h2></td>
+               <td style="background: #be53e6;"><h2 id="new_death"> </h2></td>
+             </tr>
+             
+         </table>
+      
+        <div class="tab">
+            <table id="countries_stat" class="tab2">
+                <tr>
+                    <th >Country Name</th>
+                    <th >Cases</th>
+                    <th >Deaths</th>
+                    <th>Serious Critical</th>
+                    <th>Total Recovered</th>
+                    <th>ActiveCases</th>
+                    <th>New Death</th>
+                    <th>Deaths Per 1m Population</th>
+                    <th>Total_Tests</th>
+                </tr>
+            </table>
+        </div>
+    
+   
+    <script>
+        var d = new Date();
+        document.getElementById("today").innerHTML = d;
+let new_cases = document.getElementById("new_case");
+let new_death = document.getElementById("new_death");
+let total_death = document.getElementById("total_death");
+let total_recovered = document.getElementById("total_recovered");
+let total_cases = document.getElementById("total_cases");
+let table = document.getElementById('countries_stat');
+ 
+fetch("https://coronavirus-monitor.p.rapidapi.com/coronavirus/worldstat.php", {
+    "method": "GET",
+    "headers": {
+        "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
+        "x-rapidapi-key": "bcc93bfd73msh44b00a724a0e158p14e693jsna9192b86aa01"
+    }
+})
+.then(response => response.json().then( data => {
+    console.log(data);
+    total_cases.innerHTML = data.total_cases;
+    new_cases.innerHTML = data.new_cases;
+    new_death.innerHTML = data.new_deaths;
+    total_death.innerHTML = data.total_deaths;
+    total_recovered.innerHTML = data.total_recovered;
+
+})).catch(err => {
+    console.log(err);
+});
+
+ 
+fetch("https://coronavirus-monitor.p.rapidapi.com/coronavirus/cases_by_country.php", {
+   "method": "GET",
+	"headers": {
+		"x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
+		"x-rapidapi-key": "bcc93bfd73msh44b00a724a0e158p14e693jsna9192b86aa01"
+    }
+})
+.then(response => response.json().then(data =>{
+    console.log(data)
+    let countries_stat = data.countries_stat;
+ 
+    for(let i = 0; i<countries_stat.length;i++){
+        console.log(countries_stat[i]);
+        
+        let row = table.insertRow(i+1);
+        
+        let country_name = row.insertCell(0);
+        let cases = row.insertCell(1);
+        let deaths = row.insertCell(2);
+        let serious_critical = row.insertCell(3);
+        let recovered_per_country = row.insertCell(4);
+        let active_cases = row.insertCell(5);
+        let new_deaths = row.insertCell(6);
+        let d1 =row.insertCell(7);
+        let t1=row.insertCell(8);
+        
+        country_name.innerHTML = countries_stat[i].country_name;
+        cases.innerHTML = countries_stat[i].cases;
+        deaths.innerHTML = countries_stat[i].deaths;
+        serious_critical.innerHTML = countries_stat[i].serious_critical;
+        recovered_per_country.innerHTML = countries_stat[i].total_recovered; 
+        active_cases.innerHTML = countries_stat[i].active_cases; 
+        new_deaths.innerHTML = countries_stat[i].new_deaths;
+        d1.innerHTML = countries_stat[i].deaths_per_1m_population;    
+         t1.innerHTML =countries_stat[i].total_tests;
+        
+
+    }
+}))
+.catch(err => {
+    console.log(err);
+});
+    </script>
+
+     
+
+    
+
+
+<div class="footer">
+    <h6 style="text-align: center; background:#5dc7d0;">@copyright2020</h6>
+    </div>
+
+</body>
+
+</html>

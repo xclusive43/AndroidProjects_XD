@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00FFFFFF"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:elevation="10dp"
+        android:backgroundTint="@color/mirror"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/examhead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#40C4FF"
+                android:gravity="start"
+                android:padding="5dp"
+                android:text="end semester exam"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/exammode"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/exampapername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:gravity="start"
+                android:padding="2dp"
+                android:text="papername: computer graphics-CSUG104"
+                android:textColor="#CCCACA"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/examhead"
+                app:layout_constraintTop_toBottomOf="@+id/examhead" />
+
+
+            <TextView
+                android:id="@+id/examroomnumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="2dp"
+                android:text="Room no.: 02"
+                android:textColor="#CCCACA"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/exampapername"
+                app:layout_constraintTop_toBottomOf="@+id/exampapername" />
+
+            <TextView
+
+                android:id="@+id/examdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="2dp"
+                android:text="Exam Date : 25-11-2020"
+                android:textColor="#CCCACA"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/examroomnumber"
+                app:layout_constraintTop_toBottomOf="@+id/examroomnumber" />
+
+            <TextView
+                android:id="@+id/examtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="start"
+                android:padding="2dp"
+                android:text="Exam Time 10:00 Am-11:30 Am"
+
+                android:textColor="#CCCACA"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/examroomnumber"
+                app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+            <TextView
+                android:id="@+id/examreportingtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:gravity="start"
+                android:padding="2dp"
+
+                android:text="Reporting Time 09:30 Am"
+                android:textColor="#CCCACA"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/examtime"
+                app:layout_constraintEnd_toEndOf="@+id/divider3"
+                app:layout_constraintTop_toTopOf="@+id/examtime" />
+
+            <TextView
+                android:id="@+id/exammode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#40C4FF"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="mode: online"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/examnextbtn"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/click_arraow_rigth"
+                app:tint="#CCCACA"
+
+                app:layout_constraintBottom_toBottomOf="@+id/examdate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/exammode" />
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#40C4FF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/examdate" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,1037 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:translationZ="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="lollipop">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/top_view"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/countryimg"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_launcher" />
+
+            <Spinner
+                android:id="@+id/spinnercountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/black" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/materialCardView4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="6dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView15">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/poppins"
+                            android:text="Total Population"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/population"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:text="0"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="@+id/textView2"
+                            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout9"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
+
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/divider">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1">
+
+                                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                    android:id="@+id/circularProgressBar"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    app:cpb_background_progressbar_color="@color/red_l"
+                                    app:cpb_background_progressbar_color_direction="left_to_right"
+                                    app:cpb_background_progressbar_width="12dp"
+                                    app:cpb_progress_direction="to_right"
+                                    app:cpb_progressbar_color="@color/red_m"
+                                    app:cpb_progressbar_width="7dp"
+                                    app:cpb_round_border="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    app:layout_constraintBottom_toBottomOf="@+id/circularProgressBar"
+                                    app:layout_constraintEnd_toEndOf="@+id/circularProgressBar"
+                                    app:layout_constraintStart_toStartOf="@+id/circularProgressBar"
+                                    app:layout_constraintTop_toTopOf="@+id/circularProgressBar">
+
+                                    <TextView
+                                        android:id="@+id/textView16"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Confirmed"
+                                        app:layout_constraintBottom_toBottomOf="@+id/circularProgressBar"
+                                        app:layout_constraintEnd_toEndOf="@+id/circularProgressBar"
+                                        app:layout_constraintHorizontal_bias="1.0"
+                                        app:layout_constraintStart_toStartOf="@+id/circularProgressBar"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        tools:ignore="TooDeepLayout" />
+
+                                    <TextView
+                                        android:id="@+id/textView4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="0"
+                                        android:textStyle="bold"
+                                        app:layout_constraintEnd_toEndOf="@+id/textView16"
+                                        app:layout_constraintStart_toStartOf="@+id/circularProgressBar"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView16"
+                                        tools:ignore="SmallSp" />
+
+                                    <TextView
+                                        android:id="@+id/textView5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="+0"
+                                        android:textColor="@color/red_d"
+                                        android:textSize="12sp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="@+id/textView4"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                                </LinearLayout>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1">
+
+                                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                    android:id="@+id/circularProgressBar1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    app:cpb_background_progressbar_color="@color/lightblue"
+                                    app:cpb_background_progressbar_color_direction="left_to_right"
+                                    app:cpb_background_progressbar_width="12dp"
+                                    app:cpb_progress_direction="to_right"
+                                    app:cpb_progressbar_color="@color/blue_d"
+                                    app:cpb_progressbar_width="7dp"
+
+                                    app:cpb_round_border="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    app:layout_constraintBottom_toBottomOf="@+id/circularProgressBar1"
+                                    app:layout_constraintEnd_toEndOf="@+id/circularProgressBar1"
+                                    app:layout_constraintStart_toStartOf="@+id/circularProgressBar1"
+                                    app:layout_constraintTop_toTopOf="@+id/circularProgressBar1">
+
+                                    <TextView
+                                        android:id="@+id/textView161"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Active"
+                                        app:layout_constraintBottom_toBottomOf="@+id/circularProgressBar1"
+                                        app:layout_constraintEnd_toEndOf="@+id/circularProgressBar1"
+                                        app:layout_constraintHorizontal_bias="1.0"
+                                        app:layout_constraintStart_toStartOf="@+id/circularProgressBar1"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/textView7"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="0"
+                                        android:textStyle="bold"
+                                        app:layout_constraintEnd_toEndOf="@+id/textView161"
+                                        app:layout_constraintStart_toStartOf="@+id/circularProgressBar1"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView161"
+                                        tools:ignore="SmallSp" />
+
+                                    <TextView
+                                        android:id="@+id/textView8"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="+0"
+                                        android:textColor="@color/blue_d"
+                                        android:textSize="12sp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="@+id/textView41"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView41" />
+                                </LinearLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout4"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="16dp"
+
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout9"
+                            android:baselineAligned="false">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1">
+
+                                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                    android:id="@+id/circularProgressBar11"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    app:cpb_background_progressbar_color="@color/green_l"
+                                    app:cpb_background_progressbar_color_direction="left_to_right"
+                                    app:cpb_background_progressbar_width="12dp"
+                                    app:cpb_progress_direction="to_right"
+                                    app:cpb_progressbar_color="@color/green_m"
+                                    app:cpb_progressbar_width="7dp"
+                                    app:cpb_round_border="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    app:layout_constraintBottom_toBottomOf="@+id/circularProgressBar11"
+                                    app:layout_constraintEnd_toEndOf="@+id/circularProgressBar11"
+                                    app:layout_constraintStart_toStartOf="@+id/circularProgressBar11"
+                                    app:layout_constraintTop_toTopOf="@+id/circularProgressBar11">
+
+                                    <TextView
+                                        android:id="@+id/textView163"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Recovered" />
+
+                                    <TextView
+                                        android:id="@+id/textView10"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="0"
+                                        android:textStyle="bold"
+                                        tools:ignore="SmallSp" />
+
+                                    <TextView
+                                        android:id="@+id/textView11"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="+0"
+                                        android:textColor="@color/green_m"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1">
+
+                                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                    android:id="@+id/circularProgressBar12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    app:cpb_background_progressbar_color="@color/grey_l"
+                                    app:cpb_background_progressbar_color_direction="left_to_right"
+                                    app:cpb_background_progressbar_width="12dp"
+                                    app:cpb_progress_direction="to_right"
+                                    app:cpb_progressbar_color="@color/grey_m"
+                                    app:cpb_progressbar_width="7dp"
+
+                                    app:cpb_round_border="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="@+id/circularProgressBar12"
+                                    app:layout_constraintStart_toStartOf="@+id/circularProgressBar12"
+                                    app:layout_constraintTop_toTopOf="@+id/circularProgressBar12">
+
+                                    <TextView
+                                        android:id="@+id/textView162"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Deceased" />
+
+                                    <TextView
+                                        android:id="@+id/textView13"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="0"
+                                        android:textStyle="bold"
+
+                                        tools:ignore="SmallSp" />
+
+                                    <TextView
+                                        android:id="@+id/textView14"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="+0"
+                                        android:textColor="@color/grey_m"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/divider"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="8dp"
+                            android:background="?android:attr/listDivider"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/population" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/materialCardView3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="6dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/materialCardView5">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Across Country" />
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/piechart"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/materialCardView2"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="35dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="6dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/materialCardView3">
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/barghraph"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/materialCardView5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="6dp"
+                    android:onClick="moveto"
+                    app:layout_constraintEnd_toEndOf="@+id/materialCardView"
+                    app:layout_constraintStart_toStartOf="@+id/materialCardView"
+                    app:layout_constraintTop_toBottomOf="@+id/materialCardView">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="126dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/mid_layout"
+                        android:padding="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/materialCardView">
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="16dp"
+
+
+                            android:text="Know safety tips and precautions\nfrom top Doctors"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/view"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="HardcodedText" />
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/floatingActionButton67"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/lightblue"
+                            android:padding="5dp"
+                            android:src="@drawable/right_arrow"
+                            android:translationZ="100dp"
+                            app:borderWidth="0dp"
+                            android:onClick="moveto"
+                            app:fabCustomSize="25dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:tint="@color/white" />
+
+                        <View
+                            android:id="@+id/view"
+                            android:layout_width="100dp"
+                            android:layout_height="0dp"
+                            android:background="@drawable/people"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/materialCardView6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardElevation="6dp"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/materialCardView4"
+                    app:layout_constraintStart_toStartOf="@+id/materialCardView4"
+                    app:layout_constraintTop_toBottomOf="@+id/materialCardView4">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/states_name1"
+                            style="@style/TextAppearance.MaterialComponents.Headline6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+
+                            android:layout_marginTop="8dp"
+                            android:text="states"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout2"
+                            android:layout_width="0dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/states_name1">
+                            <!--confirmed-->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1">
+
+
+                                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                    android:id="@+id/circularconfirmed"
+                                    android:layout_width="70dp"
+                                    android:layout_height="wrap_content"
+                                    app:cpb_background_progressbar_color="@color/red_l"
+                                    app:cpb_background_progressbar_color_direction="left_to_right"
+                                    app:cpb_background_progressbar_width="5dp"
+                                    app:cpb_progress_direction="to_right"
+                                    app:cpb_progressbar_color="@color/red_m"
+                                    app:cpb_progressbar_width="3dp"
+                                    app:cpb_round_border="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    app:layout_constraintBottom_toBottomOf="@+id/circularconfirmed"
+                                    app:layout_constraintEnd_toEndOf="@+id/circularconfirmed"
+                                    app:layout_constraintStart_toStartOf="@+id/circularconfirmed"
+                                    app:layout_constraintTop_toTopOf="@+id/circularconfirmed">
+
+                                    <TextView
+                                        android:id="@+id/textView16123"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Confirmed"
+                                        android:textSize="10sp"
+                                        app:layout_constraintBottom_toBottomOf="@+id/circularProgressBar"
+                                        app:layout_constraintEnd_toEndOf="@+id/circularProgressBar"
+                                        app:layout_constraintHorizontal_bias="1.0"
+                                        app:layout_constraintStart_toStartOf="@+id/circularProgressBar"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/c_total"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="0"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+                                        app:layout_constraintEnd_toEndOf="@+id/textView16"
+                                        app:layout_constraintStart_toStartOf="@+id/circularProgressBar"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView16"
+                                        tools:ignore="SmallSp" />
+
+                                    <TextView
+                                        android:id="@+id/c_delta"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="+0"
+                                        android:textColor="@color/red_d"
+                                        android:textSize="9sp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="@+id/textView4"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                                </LinearLayout>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                            <!--active-->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1">
+
+                                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                    android:id="@+id/circularProgressBaractive1"
+                                    android:layout_width="70dp"
+                                    android:layout_height="wrap_content"
+                                    app:cpb_background_progressbar_color="@color/blue_l"
+                                    app:cpb_background_progressbar_color_direction="left_to_right"
+                                    app:cpb_background_progressbar_width="5dp"
+                                    app:cpb_progress_direction="to_right"
+                                    app:cpb_progressbar_color="@color/blue_m"
+                                    app:cpb_progressbar_width="3dp"
+                                    app:cpb_round_border="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    app:layout_constraintBottom_toBottomOf="@+id/circularProgressBaractive1"
+                                    app:layout_constraintEnd_toEndOf="@+id/circularProgressBaractive1"
+                                    app:layout_constraintStart_toStartOf="@+id/circularProgressBaractive1"
+                                    app:layout_constraintTop_toTopOf="@+id/circularProgressBaractive1">
+
+                                    <TextView
+                                        android:id="@+id/textView1621312"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Active"
+                                        android:textSize="10sp"
+                                        app:layout_constraintBottom_toBottomOf="@+id/circularProgressBar1"
+                                        app:layout_constraintEnd_toEndOf="@+id/circularProgressBar1"
+                                        app:layout_constraintHorizontal_bias="1.0"
+                                        app:layout_constraintStart_toStartOf="@+id/circularProgressBar1"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/c_active"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="0"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+                                        app:layout_constraintEnd_toEndOf="@+id/textView16"
+                                        app:layout_constraintStart_toStartOf="@+id/circularProgressBar1"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView16"
+                                        tools:ignore="SmallSp" />
+
+                                    <TextView
+                                        android:id="@+id/c_active_delta"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="+0"
+                                        android:textColor="@color/blue_m"
+                                        android:textSize="9sp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="@+id/textView4"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                                </LinearLayout>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                            <!--recovered-->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1">
+
+                                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                    android:id="@+id/circularProgressBarrecovered1"
+                                    android:layout_width="70dp"
+                                    android:layout_height="wrap_content"
+                                    app:cpb_background_progressbar_color="@color/green_l"
+                                    app:cpb_background_progressbar_color_direction="left_to_right"
+                                    app:cpb_background_progressbar_width="5dp"
+                                    app:cpb_progress_direction="to_right"
+                                    app:cpb_progressbar_color="@color/green_m"
+                                    app:cpb_progressbar_width="3dp"
+                                    app:cpb_round_border="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    app:layout_constraintBottom_toBottomOf="@+id/circularProgressBarrecovered1"
+                                    app:layout_constraintEnd_toEndOf="@+id/circularProgressBarrecovered1"
+                                    app:layout_constraintStart_toStartOf="@+id/circularProgressBarrecovered1"
+                                    app:layout_constraintTop_toTopOf="@+id/circularProgressBarrecovered1">
+
+                                    <TextView
+                                        android:id="@+id/textView16d21a"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Recovered"
+                                        android:textSize="10sp"
+                                        app:layout_constraintBottom_toBottomOf="@+id/circularProgressBar1"
+                                        app:layout_constraintEnd_toEndOf="@+id/circularProgressBar1"
+                                        app:layout_constraintHorizontal_bias="1.0"
+                                        app:layout_constraintStart_toStartOf="@+id/circularProgressBar1"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/c_recovered"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="0"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+                                        app:layout_constraintEnd_toEndOf="@+id/textView16"
+                                        app:layout_constraintStart_toStartOf="@+id/circularProgressBar1"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView16"
+                                        tools:ignore="SmallSp" />
+
+                                    <TextView
+                                        android:id="@+id/c_recovered_delta"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="+0"
+                                        android:textColor="@color/green_m"
+                                        android:textSize="9sp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="@+id/textView4"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                                </LinearLayout>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                            <!--deceased-->
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1">
+
+                                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                    android:id="@+id/circularProgressBardeceased1"
+                                    android:layout_width="70dp"
+                                    android:layout_height="wrap_content"
+                                    app:cpb_background_progressbar_color="@color/grey_l"
+                                    app:cpb_background_progressbar_color_direction="left_to_right"
+                                    app:cpb_background_progressbar_width="5dp"
+                                    app:cpb_progress_direction="to_right"
+                                    app:cpb_progressbar_color="@color/grey_m"
+                                    app:cpb_progressbar_width="3dp"
+                                    app:cpb_round_border="true"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    app:layout_constraintBottom_toBottomOf="@+id/circularProgressBardeceased1"
+                                    app:layout_constraintEnd_toEndOf="@+id/circularProgressBardeceased1"
+                                    app:layout_constraintStart_toStartOf="@+id/circularProgressBardeceased1"
+                                    app:layout_constraintTop_toTopOf="@+id/circularProgressBardeceased1">
+
+                                    <TextView
+                                        android:id="@+id/textViewss1621d"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Deceased"
+                                        android:textSize="10sp"
+                                        app:layout_constraintBottom_toBottomOf="@+id/circularProgressBar1"
+                                        app:layout_constraintEnd_toEndOf="@+id/circularProgressBar1"
+                                        app:layout_constraintHorizontal_bias="1.0"
+                                        app:layout_constraintStart_toStartOf="@+id/circularProgressBar1"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/c_deceased"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="0"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold"
+                                        app:layout_constraintEnd_toEndOf="@+id/textView16"
+                                        app:layout_constraintStart_toStartOf="@+id/circularProgressBar1"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView16"
+                                        tools:ignore="SmallSp" />
+
+                                    <TextView
+                                        android:id="@+id/c_deceased_delta"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="+0"
+                                        android:textColor="@color/grey_d"
+                                        android:textSize="9sp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="@+id/textView4"
+                                        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                                </LinearLayout>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/materialCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:onClick="states"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="6dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/materialCardView6">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="start"
+                            android:text="The secret of change is to focus all of your energy, not on fighting the old, but on building the new.
+\n~ Socrates"
+                            android:textAlignment="textStart"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/imageFilterView"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+                        <androidx.constraintlayout.utils.widget.ImageFilterView
+                            android:id="@+id/imageFilterView"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:src="@mipmap/map"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/floatingActionButton2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:backgroundTint="@color/grey_d"
+                            android:clickable="true"
+                            android:onClick="states"
+                            android:src="@drawable/right_arrow"
+                            app:borderWidth="0dp"
+                            app:fabCustomSize="30dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="State Wise"
+                            app:layout_constraintStart_toStartOf="@+id/textView6"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="covid19 Live Status"
+                    android:textAllCaps="true"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Created by Xclusive @jayee"
+                    android:textColor="@color/blue_d"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView12"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="24dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/materialCardView2">
+
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="copyright @2020-21" />
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Supported by corona.lmao.ninja &amp; Covid19india.org "
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

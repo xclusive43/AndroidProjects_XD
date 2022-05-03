@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Xclusive Calculator</string>
+    <string name="backSpace">⌫</string>
+    <string name="back">back</string>
+
+</resources>

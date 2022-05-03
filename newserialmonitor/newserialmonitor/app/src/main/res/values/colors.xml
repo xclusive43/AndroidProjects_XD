@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3700B3</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorSendText">#D2FA65</color>
+    <color name="black">#020202</color>
+    <color name="white">#FFFFFF</color>
+    <color name="orange">#FF5252</color>
+    <color name="purple">#800080</color>
+    <color name="btnbackground">#B1B1B1</color>
+    <color name="transparent">#00B1B1B1</color>
+
+    <color name="bringle">#6200EE</color>
+    <color name="darkbringle">#3700B3</color>
+</resources>

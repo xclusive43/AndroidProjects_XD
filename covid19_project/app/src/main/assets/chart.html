@@ -1,0 +1,267 @@
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <!-- Uncompressed jQuery -->
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Font Awesome -->
+    <script
+            src="https://kit.fontawesome.com/996973c893.js"
+            crossorigin="anonymous"
+    ></script>
+
+    <!-- Google Fonts -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <!-- My Stylesheet -->
+
+
+    <!-- My jQuery <script src="main.js"></script>-->
+
+
+    <!-- Chart.js (Working CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+    <title>covid19</title>
+    <style type="text/css">
+
+    	/* Changing the font-family of all the elements in the project */
+body {
+      font-family: 'Righteous', cursive;
+    background: #3c3737;
+     }
+
+        .card
+        {
+
+        }
+        #h
+        {
+
+            width: 95%;
+            background: #3c3737;
+            padding: 10px;
+            color: #e8e8e8;
+            top: 15px;
+            bottom: 100px;
+            border: 0px solid  #9aa3ac;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            left: 10px;
+
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+
+
+        }
+        #btn
+        {
+            background: #312f2f;
+            color: #ced3d8;
+            border: 1px solid  #9aa3ac;
+             box-shadow: 0 14px 28px rgba(74, 67, 67, 0.5), 0 10px 10px rgba(172, 63, 63, 0.1);
+            text-align: center;
+            margin-top: 5px;
+             border-radius: 20px;
+
+        }
+        #head1
+        {
+            background-image: linear-gradient(0deg, #138808 33%, #ffffff 33%, #ffffff 66%, #FF9933 66% );
+            box-shadow: 0 14px 28px rgba(74, 67, 67, 0.5), 0 10px 10px rgba(172, 63, 63, 0.1);
+            /*box-shadow: 0px 10px; */
+            width: 50%;
+
+            border-bottom-left-radius: 560px;
+            border-bottom-right-radius: 170px;
+            border-top-right-radius: 490px;
+
+        }
+
+        #ic
+        {
+
+            margin-top: 5px;
+            border-bottom-left-radius: 500px;
+            border-bottom-right-radius: 100px;
+            border-top-right-radius: 300px;
+
+             box-shadow: 0 14px 28px rgba(74, 67, 67, 0.5), 0 5px 10px rgba(21, 18, 18, 0.83);
+
+        }
+        #bb
+        {
+            width: 97%;
+
+
+
+        }
+        h5
+        {
+
+            color: #1d1b1b;
+            font-size: 10px;
+            margin-right: 20px;
+            margin-top: 10px;
+
+        }
+        p
+        {   text-align: center;
+             color: white;
+            letter-spacing: 1px;
+            font-size: 10px;
+
+        }
+       #can
+        {
+            width: 98%;
+            margin-right: 10px;
+
+        }
+        .box-sizing
+        {
+            background: #d4d4d4;
+             width: 98%;
+             margin-left: 2px;
+            font-size: 10px;
+            border-radius: 20px;
+
+
+        }
+
+
+    </style>
+</head>
+
+
+
+<body>
+
+<div class="card" id="h">
+    COVID19 LIVE STATUS<br>
+    <h6 class="card-letter" style="font-size: 10px; color: #00bbff">Created by Xclusive @jayee </h6>
+
+</div>
+
+
+
+<!--///////////////-->
+<!-- Bottom Note -->
+
+<div class="container  p-3 my-2 text-center" style="padding: 40px;  ">
+    <div id="head4" style="text-align: center; color: rgba(255, 226, 0, 0.72); font-size:10px;"></div>
+    <canvas id="myChart" width="200" height="200" style="margin-bottom: 15px; margin-top: 30px; padding: 15px; border-radius: 10px; box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.1);"></canvas></div>
+
+
+
+<div class="container  p-2 my-1 text-center">
+
+    <p class="text" style="font-size: 12px; color: #e8e8e8;">“Nothing is of greater importance than the conservation of human life."<br>
+
+        – Former U.S. President Calvin Coolidge</p>
+
+</div>
+
+
+
+<!-- Footer -->
+<footer class="footer mt-5 py-2" style="margin-top:0px; background: rgba(0, 0, 0, 0)">
+    <div class="container text-center">
+        <span class="text-muted" style="font-size: 12px;"
+        >Copyright &copy;2020
+          <a href="#" target="_blank" style="font-size: 12px;"><br>Xclusive-@jayee | Informed by Covid19india.org</a></span>
+    </div>
+</footer>
+<!--///////////////-->
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+
+<script>
+
+      var confirmed;
+             var recovered;
+             var deaths;
+             var date;
+             var recentdeaths;
+             var recentrecovered;
+             var country;
+             var active;
+      var request = new XMLHttpRequest();
+         request.open('GET',"https://api.covid19india.org/data.json");
+         request.onload =function()
+         {
+             var response = request.response;
+             var data =JSON.parse(response);
+             console.log(data.statewise[0]);
+             var d = data.statewise[0];
+                active = d.active;
+                confirmed =d.confirmed;
+                recovered = d.recovered;
+                deaths =d.deaths;
+                date =d.lastupdatedtime;
+                recentdeaths = d.deltadeaths;
+                recentrecovered = d.deltarecovered;
+                country = "INDIA";
+
+
+               num.push(confirmed,recovered,active,deaths);
+
+
+
+
+         }
+
+
+         request.send();
+
+         var ctx = document.getElementById("myChart").getContext("2d");
+         var num = [];
+         var myPieChart = new Chart(ctx, {
+                        type: 'doughnut',
+                        data: {
+                            labels:['Confirmed','Recovered','Active','Deaths'],
+                            datasets:[
+                                {
+                                    labels:'Points',
+                                    backgroundColor:['#e55353','#53e591','#53bee5;','#861717'],
+                                    data:num,
+
+                                }
+                            ]
+                        },
+                        options:
+             {   title:
+              {
+                display:true,
+                  text:'select a box for pie-chart visualization of India'
+              },
+                 animation:
+                 {
+                     animationScale:false,
+                 }
+             }
+                });
+
+
+
+
+    </script>
+
+</html>

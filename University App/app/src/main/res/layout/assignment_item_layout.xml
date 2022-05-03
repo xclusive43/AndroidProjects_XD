@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="#004C4949"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/mirror"
+
+        app:cardCornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="20dp"
+            android:background="@color/mirror"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="Assign Date: Date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Due: date+time"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/assignmentpapernamecode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:gravity="start"
+                android:text="papername+code"
+                android:textColor="@color/white"
+                android:textAllCaps="true"
+
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+            <TextView
+                android:id="@+id/assignmenttype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="start"
+                android:text="assignment type -> online or offline "
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/assignmentmarks"
+                app:layout_constraintTop_toBottomOf="@+id/assignmentpapernamecode" />
+
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Status: submitted"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/assignmenttype"
+                app:layout_constraintTop_toBottomOf="@+id/assignmenttype" />
+            <TextView
+                android:id="@+id/assignmentmarks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textColor="@color/white"
+                android:text="Marks: 100/100"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/assignmentsubmitbtn"
+                app:layout_constraintStart_toStartOf="@+id/assignmentpapernamecode"
+                app:layout_constraintTop_toTopOf="@+id/assignmentsubmitbtn" />
+
+            <Button
+                android:id="@+id/assignmentdownloadbtn"
+                android:layout_width="85dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/circle_bar"
+                android:text="Download"
+                android:textColor="@color/white"
+                android:textSize="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+            <Button
+                android:id="@+id/assignmentsubmitbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/circle_bar"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:textSize="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/assignmentdownloadbtn"
+                app:layout_constraintEnd_toStartOf="@+id/assignmentdownloadbtn"
+                app:layout_constraintTop_toTopOf="@+id/assignmentdownloadbtn" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

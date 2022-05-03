@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white1"
+    android:padding="20dp"
+    tools:context=".login"
+
+    >
+
+   <LinearLayout
+       android:paddingLeft="30dp"
+       android:paddingRight="30dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+
+       android:orientation="vertical"
+       android:layout_gravity="start"
+       tools:ignore="MissingConstraints">
+
+      <ImageView
+          android:id="@+id/backbtn1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/back"
+          android:padding="5dp"
+          android:tint="@color/colorPrimary"
+
+
+          />
+
+       <ProgressBar
+           android:id="@+id/loginprogressbar"
+           android:layout_width="wrap_content"
+           android:progressTint="@color/colorPrimary"
+
+           android:elevation="10dp"
+           android:backgroundTint="@color/colorPrimary"
+           android:layout_gravity="center"
+            android:visibility="gone"
+           android:layout_height="40dp"/>
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="50dp"
+           android:fontFamily="@font/black_ops_one"
+           android:letterSpacing="0.4"
+           android:text="LOGIN"
+           android:textAllCaps="true"
+           android:textColor="@color/colorPrimary"
+           android:textSize="30sp"
+
+           />
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:gravity="center"
+           android:layout_marginTop="40dp">
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+               android:hint="Username/Email"
+               app:hintTextColor="@color/colorPrimary"
+               app:boxStrokeColor="@color/colorPrimary"
+               app:boxStrokeWidthFocused="3dp"
+               android:letterSpacing="0.2"
+               app:startIconDrawable="@drawable/email_icon"
+               app:startIconTint="@color/black"
+               app:endIconMode="clear_text"
+               app:endIconTint="@color/black"
+               >
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/email_input"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:fontFamily="sans-serif"
+                   android:textColor="@color/black"
+                   android:inputType="text"/>
+           </com.google.android.material.textfield.TextInputLayout>
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+               android:hint="Password"
+               app:hintTextColor="@color/black"
+               app:boxStrokeColor="@color/black"
+               app:boxStrokeWidthFocused="3dp"
+               app:startIconDrawable="@drawable/password_icon"
+               app:startIconTint="@color/black"
+               android:letterSpacing="0.2"
+               app:endIconMode="password_toggle"
+               app:endIconTint="@color/black"
+               android:layout_marginTop="10dp"
+               >
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/password_input"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:fontFamily="sans-serif"
+                   android:textColor="@color/black"
+                   android:inputType="textPassword"/>
+           </com.google.android.material.textfield.TextInputLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="horizontal"
+               android:layout_marginTop="5dp"
+               android:gravity="end"
+
+               >
+
+
+               <Button
+                   android:id="@+id/forgot_passwordbtn"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="FORGET PASSWARD"
+                   android:textSize="10sp"
+                   android:letterSpacing="0.2"
+                   android:textColor="@color/colorPrimary"
+                   android:backgroundTint="@color/white1"
+                   />
+
+           </LinearLayout>
+           <Button
+               android:id="@+id/loginbtn"
+               android:layout_marginTop="5dp"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Sign in"
+               android:background="@drawable/button_border1"
+               android:textAllCaps="true"
+               android:textStyle="bold"
+               android:letterSpacing="0.4"
+               android:textColor="@color/white1"
+
+
+               />
+           <Button
+               android:id="@+id/registerbtn"
+               android:gravity="center"
+               android:layout_marginTop="10dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="sign up"
+               android:background="@color/white1"
+               android:textAllCaps="true"
+               android:backgroundTint="@color/white1"
+               android:letterSpacing="0.4"
+               android:textColor="@color/colorPrimary"
+               />
+       </LinearLayout>
+
+
+   </LinearLayout>
+
+</ScrollView>

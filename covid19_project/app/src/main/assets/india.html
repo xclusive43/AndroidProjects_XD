@@ -1,0 +1,382 @@
+
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <!-- Uncompressed jQuery -->
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Font Awesome -->
+    <script
+            src="https://kit.fontawesome.com/996973c893.js"
+            crossorigin="anonymous"
+    ></script>
+
+    <!-- Google Fonts -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <!-- My Stylesheet -->
+
+
+    <!-- My jQuery <script src="main.js"></script>-->
+
+
+    <!-- Chart.js (Working CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+    <title>covid19</title>
+    <style type="text/css">
+
+    	/* Changing the font-family of all the elements in the project */
+body {
+      background: #3c3737;
+      font-family: 'Righteous', cursive;
+     }
+
+        .card
+        {
+
+        }
+        #h
+        {    justify-content: center;
+
+            width: 95%;
+            background: #3c3737;
+            padding: 10px;
+            color: #e8e8e8;
+            top: 15px;
+            bottom: 100px;
+            border: 0px solid  #9aa3ac;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            left: 10px;
+
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+
+
+        }
+        #btn
+        {    margin-left: 10px;
+             width: 95%;
+             background: #312f2f;
+             color: #ced3d8;
+             border: 0px solid  #9aa3ac;
+             box-shadow: 0px 12px 28px rgba(0, 0, 0, 0.81), 0 10px 10px rgba(0, 0, 0, 0.1);
+             text-align: center;
+             margin-top: 5px;
+             border-radius: 10px;
+             padding: 5px;
+
+
+
+        }
+        #head1
+        {
+            margin-top: 30px;
+            //<!--background-image: linear-gradient(0deg, #138808 33%, #ffffff 33%, #ffffff 66%, #FF9933 66% );-->
+            box-shadow:  14px 28px rgba(255, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+
+
+
+
+
+        }
+
+        #ic
+        {   border-radius: 100px;
+            padding: 1px;
+            margin-top: 5px;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.1);
+
+
+
+        }
+        #bb
+        {
+
+            padding: 20px;
+            width: 94%;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.1);
+        }
+        h5
+        {
+
+            color: #000000;
+            font-size:12px;
+            text-align: center;
+            margin-top: 20px;
+
+
+        }
+        .r1{
+
+            color: #000000;
+            text-align: center;
+            font-size:12px;
+
+        }
+        p
+        {
+             text-align: center;
+             color: #000000;
+             letter-spacing: 1px;
+             font-size:13px;
+
+        }
+       #can
+        {
+            width: 98%;
+            margin-right: 10px;
+
+        }
+        .box-sizing
+        {
+             background: #d4d4d4;
+             width: 98%;
+             margin-left: 2px;
+             font-size: 10px;
+             border-radius: 20px;
+
+
+        }
+
+
+    </style>
+</head>
+
+
+
+<body>
+
+<div class="card" id="h">
+    COVID19 LIVE STATUS<br>
+    <h6 class="card-letter" style="font-size: 11px; color: #00bbff">Created by Xclusive @jayee </h6>
+
+</div>
+<div class=" d-flex justify-content-center" >
+
+    <img src="Group%201.png" alt="india" class="round-circle" width="100" heigth="100" id="head1"/>
+
+</div>
+
+
+<!--main content-->
+<div class="container my-2" id="bb">
+    <div class="row text-center " >
+        <div class="col-3 text-info " id="ic" style="background: #e23d3d; ">
+            <h5>Confirmed<p id="confirmed" class="r1"></p></h5>
+
+        </div>
+        <div class="col-3 text-info"  id="ic" style="background: #53bee5;    ">
+            <h5>Active<p id="active" class="r1"></p></h5>
+        </div>
+        <div class="col-3 text-success"  id="ic" style="background: #53e591  ">
+            <h5>Recovered<p id="recovered" class="r1"></p></h5>
+        </div>
+        <div class="col-3 text-danger"  id="ic" style="background: #e8b033;
+            ">
+            <h5>Deaths<p id="deaths" class="r1"></p></h5><br>
+        </div>
+
+    </div>
+    <div class="row ">
+
+
+        <div class="col-3 text-info"  id="ic" style="background: rgba(105, 12, 0, 0); border-bottom-right-radius: 60px; border-top-left-radius: 70px;">
+            <h5 style="color: #ffffff;">Date</h5><p id="date1" style="color: aliceblue; font-size: 10px;" class="r1"></p>
+        </div>
+
+        <div class="col-3 text-warning" id="ic" style="background: rgba(83, 190, 229, 0); border-bottom-left-radius:50px; border-bottom-right-radius: 50px; ">
+            <h5 style="color: #ffffff;">New Case<p id="newcase" style="color: #ffffff;" class="r1"></p></h5>
+        </div>
+
+        <div class="col-3 text-success"  id="ic" style="background: rgba(83, 229, 145, 0); border-bottom-left-radius:50px; border-bottom-right-radius: 50px;">
+            <h5 style="color: #ffffff;">New Recovered<p id="newrecovered1" style="color: #ffffff;" class="r1" ></p></h5>
+        </div>
+        <div class="col-3 text-danger"  id="ic" style="background: rgba(150, 71, 185, 0); border-bottom-left-radius: 60px; border-top-right-radius: 70px;">
+            <h5 style="color: #ffffff;">New Deaths<p id="newdeaths1" style="color: #ffffff;" class="r1"></p></h5><br>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!--///////////////-->
+<!-- Bottom Note -->
+
+<!--<div class="container bg-light p-3 my-5 text-center" style="padding: 40px">
+    <div id="head4" style="text-align: center; font-size:10px;">select a box for pie-chart visualization of India</div>
+    <canvas id="myChart" width="200" height="200"></canvas></div>-->
+
+
+<div class="container  p-1 my-2 text-center" style="background: rgba(0, 0, 0, 0);">
+
+    <div class="container my-2" id="bb1">
+
+
+        <p class="text-info" style="font-size: 10px; font-style: italic;">“At the end of the day, the goals are simple: <br>Safety and security."
+
+            <br>– Jodi Rell, former Governor of Connecticut</p>
+
+    </div>
+</div>
+
+<!--footers and buttons-->
+<div class="card-letter" id="btn" >
+    <a href="state.html"><button type="button" class="btn btn-info" style="padding: 5px; font-size: 11px; ">State Wise</button></a>
+
+    <a href="district.html"><button type="button" class="btn btn-danger"  style="padding: 5px;  font-size: 11px;">District Wise</button></a>
+
+
+
+
+    <a href="world.html"><button type="button" class="btn btn-success"  style="padding: 5px;  font-size: 11px; ">
+        World Wise</button></a>
+    <a href="chart.html"><button type="button" class="btn btn"  style="padding: 5px; color: aliceblue;  background-color: #95a013; font-size:11px;
+
+        ">Chart Visualization</button></a>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="footer mt-5 py-2" style="margin-top:0px; background: rgba(0, 0, 0, 0)">
+    <div class="container text-center">
+        <span class="text-muted" style="font-size: 12px;"
+        >Copyright &copy;2020
+          <a href="#" target="_blank" style="font-size: 12px;"><br>Xclusive-@jayee | Informed by Covid19india.org</a></span>
+    </div>
+</footer>
+<!--///////////////-->
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+
+<script>
+
+      var confirmed;
+             var recovered;
+             var deaths;
+             var date;
+             var recentdeaths;
+             var recentrecovered;
+             var country;
+             var active;
+      var request = new XMLHttpRequest();
+         request.open('GET',"https://api.covid19india.org/data.json");
+         request.onload =function()
+         {
+             var response = request.response;
+             var data =JSON.parse(response);
+             
+             console.log(data);
+             //console.log(data.statewise[0]);
+             var d = data.statewise[0];
+                active = d.active;
+                confirmed =d.confirmed;
+                recovered = d.recovered;
+                deaths =d.deaths;
+                date =d.lastupdatedtime;
+                recentdeaths = d.deltadeaths;
+                recentrecovered = d.deltarecovered;
+                country = "INDIA";
+             
+
+               document.getElementById("confirmed").innerHTML=confirmed;
+               document.getElementById("active").innerHTML=active;
+               document.getElementById("recovered").innerHTML=recovered;
+               document.getElementById("deaths").innerHTML=deaths;
+
+               document.getElementById("date1").innerHTML=date;
+               num.push(confirmed,recovered,active,deaths);
+
+
+
+
+         }
+
+         loads();
+
+         request.send();
+
+         var ctx = document.getElementById("myChart").getContext("2d");
+         var num = [];
+         var myPieChart = new Chart(ctx, {
+                        type: 'doughnut',
+                        data: {
+                            labels:['Confirmed','Recovered','Active','Deaths'],
+                            datasets:[
+                                {
+                                    labels:'Points',
+                                    backgroundColor:['#e55353','#53e591','#53bee5;','#861717'],
+                                    data:num,
+
+                                }
+                            ]
+                        },
+                        options:
+             {   title:
+              {
+                display:false,
+                  text:'INDIA'
+              },
+                 animation:
+                 {
+                     animationScale:false,
+                 }
+             }
+                });
+
+/////////////////////////////////////////
+   //
+  function loads()
+{
+    $(document).ready(function()
+{
+  $.getJSON("https://api.covid19api.com/summary",function(data1){
+
+        //console.log(data);
+        //console.log(data.Global);
+        //console.log(data1.Countries);
+      //var countries1 = data1.Countries;
+      //console.log("len"+countries1.length);
+
+      document.getElementById("newcase").innerHTML = data1.Countries[76].NewConfirmed;
+
+      document.getElementById("newrecovered1").innerHTML = data1.Countries[76].NewRecovered;
+
+      document.getElementById("newdeaths1").innerHTML = data1.Countries[76].NewDeaths;
+
+
+
+
+
+
+  });
+});
+
+}
+
+    ///////////////
+
+
+    </script>
+
+</html>

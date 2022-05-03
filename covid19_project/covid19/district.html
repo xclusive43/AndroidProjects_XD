@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <!-- Uncompressed jQuery -->
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Font Awesome -->
+    <script
+            src="https://kit.fontawesome.com/996973c893.js"
+            crossorigin="anonymous"
+    ></script>
+
+    <!-- Google Fonts -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <!-- My Stylesheet -->
+
+
+    <!-- My jQuery <script src="main.js"></script>-->
+
+
+    <!-- Chart.js (Working CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+    <title>district
+    </title>
+    <style type="text/css">
+
+    	/* Changing the font-family of all the elements in the project */
+body {
+      font-family: 'Righteous', cursive;
+      background: #3c3737;
+    margin: 0;
+    padding: 0;
+     }
+
+         #h
+        {
+            justify-content: center;
+             width: 95%;
+            background: #3c3737;
+            padding: 10px;
+            color: #e8e8e8;
+            top: 15px;
+            bottom: 100px;
+            border: 0px solid  #9aa3ac;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            left: 10px;
+            
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+           
+
+
+
+        }
+
+        #selector1{
+            
+         width: 97%;
+            margin-top: 35px;
+            background: rgba(0, 0, 0, 0);
+            
+             
+        }
+         .body1{
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.1);
+            width: 95%;
+             margin-left: 10px;
+        }
+
+
+        h5
+        {
+
+            color: #1d1b1b;
+            font-size: 10px;
+            margin-right: 20px;
+            margin-top: 10px;
+
+        }
+        p
+        {   text-align: center;
+             color: white;
+            letter-spacing: 1px;
+            font-size: 10px;
+
+        }
+        .table-responsive
+        {
+             
+            
+            margin-top: 0px;
+        }
+        th
+        {
+            background-color: rgba(173, 51, 84, 0);
+           color: #d8cccc;
+            letter-spacing: 1px;
+            font-size: 10px;
+        }
+        table tr:nth-child(odd) {
+    background-color:rgba(42, 105, 95, 0);
+    color: #d8cccc;
+    text-align:left;
+            font-size: 10px;
+
+
+}
+    table tr:nth-child(even) {
+    background-color:rgba(0, 0, 0, 0);
+ color: #d8cccc;
+    text-align: left;
+    font-size: 10px;
+}
+        .form-control
+        {
+            width: 95%;
+            margin-left: 3%;
+            margin-top:8px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="card" id="h">
+    COVID19 LIVE STATUS<br>
+    <h6 class="card-letter" style="font-size: 10px; color: #00bbff">Created by Xclusive @jayee</h6>
+
+</div>
+
+
+
+<div class="form-group" id="selector1">
+<select class="form-control" id="states" onchange="statefun();" required style="background: #3c3737; color: aliceblue; font-size: 12px;">
+
+
+        <option value="default" style="font-size: 12px;">select state</option>
+
+
+    </select>
+</div>
+    
+<div class="body1">   
+<div class="card" style="text-align: center; padding: 10px; color: #de1515;background-color: rgba(173, 51, 84, 0);   ">
+   Indian States And Union Territory
+
+</div>
+<div class="table-responsive">
+    <table class="table" id="countries_stat">
+
+        <tr>
+
+            <th class="text-capitalize;">Districts</th>
+            <th class="text-capitalize;">Confirmed</th>
+            <th class="text-capitalize;">Active</th>
+            <th class="text-capitalize;">Recovered</th>
+            <th class="text-capitalize;">Deaths</th>
+        </tr>
+        <tr><td id="tstates"></td>
+            <td id="tconfirmed"></td>
+            <td id="tactive"></td>
+            <td id="tdeaths"></td>
+            <td id="trecovered"></td>
+        </tr>
+    </table>
+</div>
+
+<div class="card-letter" id="btn">
+  <center><button type="button" class="btn btn-info" style="padding: 2px; font-size: 13px;  margin-bottom: 10px; letter-spacing: 1px;" onclick="reload();">Refresh Page</button>
+  </center>
+</div>
+    
+    </div> 
+
+
+
+<!-- Quote
+ <!-- Used by Chart.js
+ <canvas id="myChart"></canvas>
+
+ <!-- Bottom Note
+ <div class="container text-center my-2">
+   <h6 class="text-info">
+
+   </h6>
+ </div>
+
+ <!-- Footer -->
+<!-- Footer -->
+<footer class="footer mt-5 py-2" style="margin-top:0px; background: rgba(0, 0, 0, 0)">
+    <div class="container text-center">
+        <span class="text-muted" style="font-size: 12px;"
+        >Copyright &copy;2020
+          <a href="#" target="_blank" style="font-size: 12px;"><br>Xclusive-@jayee | Informed by Covid19india.org</a></span>
+    </div>
+</footer>
+<!--///////////////-->
+</body>
+</html>
+
+
+<script type="text/javascript">
+    //global variables
+    var states;
+
+
+      var state=[];
+      var confirmed= [];
+      var recovered =[];
+      var deaths=[];
+////////////////////////////////////////////////////
+var select= document.getElementById("states");//selector
+function statefun()
+      {
+          var input1=0;
+
+
+
+             var name =        document.getElementById('states').value;
+          //document.getElementById('state').innerHTML = name;
+             //console.log(name);
+          for(var a=1;a<states.length;a++)
+              {
+                   //var txt1 = document.createTextNode(states[a].state);
+
+
+                  if(states[a].state==name)
+                      {
+                          //console.log(a);
+                          input1 = a;
+
+                          /////////////
+                          let table = document.getElementById('countries_stat');
+
+
+
+      for(let i=0; i<states.length;i++){
+
+          let row= table.insertRow(i+1);
+          let statename =row.insertCell(0);
+          let confirmed =row.insertCell(1);
+
+          let active =row.insertCell(2);
+          let recovered =row.insertCell(3);
+          let deaths =row.insertCell(4);
+
+       statename.innerHTML = states[input1].districtData[i+0].district;
+       confirmed.innerHTML = states[input1].districtData[i+0].confirmed;
+       active.innerHTML = states[input1].districtData[i+0].active;
+       recovered.innerHTML = states[input1].districtData[i+0].recovered;
+       deaths.innerHTML = states[input1].districtData[i+0].deceased;
+          }
+
+
+
+                      }
+
+
+              }
+
+      }
+
+
+
+
+$(document).ready(function()
+{
+  $.getJSON("https://api.covid19india.org/v2/state_district_wise.json",function(data){
+
+
+
+
+      //console.log(data[input1].state);
+       states = data;
+
+
+      //console.log(data[input1].districtData[1]);
+
+
+      /////////////////////////////////////////////
+          //var ar=["AR","B"];
+      for(var j=0;j<states.length;j++)
+          {
+
+              var option =document.createElement("OPTION"),
+                  txt = document.createTextNode(data[j].state);
+                  option.appendChild(txt);
+                 select.insertBefore(option,name.lastChild);
+
+
+              // document.getElementById("state").innerHTML = data[j].state;
+
+          }
+
+
+    ///////////////////////////////////////////////
+
+
+      //console.log(countries.length);
+      //console.log(states.length);
+
+
+
+
+      });
+
+
+
+  });
+
+    function reload()
+    {
+        location.reload();
+    }
+</script>
