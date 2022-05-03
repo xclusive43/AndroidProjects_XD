@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Musicapp" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary1</item>
+        <item name="colorPrimaryVariant">@color/primary1</item>
+        <item name="colorOnPrimary">@color/text_color</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/primary1</item>
+        <item name="colorSecondaryVariant">@color/primary1</item>
+        <item name="colorOnSecondary">@color/text_color</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />
+
+    <style name="SplashTheme" parent="Theme.Musicapp">
+
+        <item name="android:windowBackground">@color/primary2</item>
+
+    </style>
+</resources>

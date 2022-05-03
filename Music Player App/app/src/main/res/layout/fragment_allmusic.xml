@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/primary2"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".allmusic">
+   <com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView
+        android:id="@+id/allsongsfast"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary2"
+        app:fastScrollPopupBgColor="@color/primary1"
+        app:fastScrollPopupTextColor="#000"
+        app:fastScrollThumbColor="#000"
+        app:fastScrollThumbInactiveColor="@color/primary2"
+        tools:context="com.iven.musicplayergo.MainActivity" />
+
+</FrameLayout>

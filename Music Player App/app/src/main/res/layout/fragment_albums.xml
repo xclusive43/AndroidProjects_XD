@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Albums">
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/albumrecyclerview"
+      android:layout_width="match_parent"
+      android:layout_gravity="center"
+      android:visibility="gone"
+      android:layout_height="match_parent"/>
+
+  <com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView
+      android:id="@+id/albumfastrecyclerview"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@color/primary2"
+      android:textAlignment="center"
+      android:layout_gravity="center_horizontal"
+      app:fastScrollPopupBgColor="@color/primary1"
+      app:fastScrollPopupTextColor="#000"
+      app:fastScrollThumbColor="#000"
+      app:fastScrollThumbInactiveColor="@color/primary2"
+      tools:context="com.iven.musicplayergo.MainActivity" />
+</FrameLayout>

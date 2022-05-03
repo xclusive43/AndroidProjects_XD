@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+     android:id="@+id/audioitem"
+      app:cardElevation="10dp"
+      android:backgroundTint="@color/primary2"
+      android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:padding="5dp"
+        android:layout_marginRight="10dp">
+
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#454343"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/musicnumber"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTintMode="screen"
+            app:layout_constraintBottom_toBottomOf="parent"
+            style="@style/Widget.Neumorph.CardView"
+            android:textStyle="bold"
+            android:fontFamily="@font/fjalla_one"
+            app:layout_constraintStart_toStartOf="parent"
+            app:neumorph_shadowColorDark="#323131"
+            app:neumorph_shadowColorLight="#000000"
+            app:neumorph_shapeType="basin"
+            app:layout_constraintTop_toBottomOf="@+id/divider"
+            >
+            <TextView
+                android:id="@+id/songnumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="1"
+                android:textSize="10sp"
+                android:gravity="center"
+                android:fontFamily="@font/fjalla_one"
+                android:textColor="#8A8B8C"
+                android:textStyle="bold"
+                />
+
+        </soup.neumorphism.NeumorphCardView>
+
+        <TextView
+            android:id="@+id/musictitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poiret_one"
+            android:letterSpacing="0.1"
+            android:text="TextView"
+            android:padding="10dp"
+            android:textColor="#CACACA"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/musicimage"
+            app:layout_constraintEnd_toStartOf="@+id/musicimage"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/musicnumber"
+            app:layout_constraintTop_toTopOf="@+id/musicimage" />
+
+        <ImageView
+            android:id="@+id/musicimage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider"
+            app:srcCompat="@drawable/currentmusic"
+
+            android:backgroundTintMode="screen"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
